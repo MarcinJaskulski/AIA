@@ -1,0 +1,247 @@
+/*Mobile*/
+@media only screen and (max-width: 767px) {
+  #title {
+    display: none;
+  }
+
+  .content > .section {
+    width: 92%;
+    margin-right: 4%;
+    margin-bottom: 4%;
+  }
+
+  .borderSection > .sectionBody {
+    min-height: 0px;
+  }
+}
+/*Tablet i Mobile*/
+@media only screen and (max-width: 1023px) {
+  #menu {
+    display: none;
+    position: absolute;
+    background-color: white;
+    margin-top: -5px;
+    padding: 0px;
+  }
+
+  .dropdown {
+    display: block;
+    float: right;
+    position: relative;
+  }
+  .dropdown:before {
+    clear: both;
+  }
+  .dropdown:hover > #menu {
+    display: block;
+  }
+
+  li {
+    padding: 5px;
+    list-style-type: none;
+  }
+}
+/*Tablet*/
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  .content > .section:first-child {
+    width: 92%;
+    margin-right: 4%;
+    margin-bottom: 4%;
+  }
+  .content > .section {
+    width: 44%;
+    margin-bottom: 4%;
+  }
+
+  .borderSection > .sectionBody {
+    min-height: 0px;
+  }
+  .borderSection > .normalizeBody {
+    min-height: 240px;
+  }
+}
+/*Tablet i Desktop*/
+@media only screen and (min-width: 768px) {
+  #title {
+    margin-left: 1%;
+    padding: 0;
+    padding-top: 20px;
+    float: left;
+    font-size: 32px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  #logoMenu {
+    display: none;
+  }
+
+  #menu {
+    display: block;
+    float: left;
+    padding: 0;
+    margin: 0;
+    width: 400px;
+    list-style-type: none;
+    font-size: 24px;
+  }
+  #menu:before {
+    clear: both;
+  }
+
+  .dropdown {
+    display: block;
+    float: right;
+  }
+  .dropdown:before {
+    clear: both;
+  }
+
+  #menu > li {
+    float: left;
+    list-style-type: none;
+    width: 20%;
+  }
+  #menu > li:before {
+    clear: both;
+  }
+}
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+#nav {
+  width: 100%;
+  display: inline-block;
+}
+
+.navPadding {
+  padding: 4%;
+}
+
+#logo {
+  float: left;
+  display: block;
+}
+
+li {
+  text-align: center;
+}
+li:hover {
+  background-color: #8FBC8F;
+}
+
+#container {
+  width: 100%;
+  font-size: 16px;
+  padding-bottom: 6rem;
+}
+
+.content {
+  width: 100%;
+  display: inline-block;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.section {
+  width: 28%;
+  background-color: #8FBC8F;
+  float: left;
+  margin-left: 4%;
+  display: block;
+  margin-bottom: 4%;
+}
+.section:last-child {
+  margin-right: 4%;
+}
+.section:last-child:before {
+  clear: both;
+}
+
+.borderSection {
+  border: solid;
+  border-width: 2px;
+  display: inline-block;
+}
+
+.sectioTitleNav {
+  width: 100%;
+  display: inline-block;
+}
+
+.emptySpace {
+  display: block;
+  float: left;
+}
+
+.sectionTitle1 {
+  width: 200px;
+  display: block;
+  float: right;
+  text-align: center;
+  border-bottom: solid;
+  border-left: solid;
+  border-width: 2px;
+  margin-bottom: -2px;
+  margin-left: -2px;
+  padding: 10px;
+  font-size: 24px;
+  background-color: cyan;
+}
+
+.sectionTitle2 {
+  width: 200px;
+  display: block;
+  float: right;
+  text-align: center;
+  border-bottom: solid;
+  border-left: solid;
+  border-width: 2px;
+  margin-bottom: -2px;
+  margin-left: -2px;
+  padding: 10px;
+  font-size: 24px;
+  background-color: orange;
+}
+
+.sectionTitle3 {
+  width: 200px;
+  display: block;
+  float: right;
+  text-align: center;
+  border-bottom: solid;
+  border-left: solid;
+  border-width: 2px;
+  margin-bottom: -2px;
+  margin-left: -2px;
+  padding: 10px;
+  font-size: 24px;
+  background-color: pink;
+}
+
+.sectionBody {
+  padding: 20px;
+  min-height: 270px;
+  text-align: justify;
+}
+
+#wrapper {
+  position: relative;
+  min-height: 100vh;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 2rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  background-color: #8FBC8F;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  border-top: solid;
+}
+
+/*# sourceMappingURL=style.css.map */

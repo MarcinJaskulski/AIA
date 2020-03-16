@@ -1,0 +1,7 @@
+Podczas wykonywania zadania skorzystałem z "float: left/right" do stworzenia siatki div'ów. Przy pomocy sass'a skorzystałem z nesting'u do czyszczenia parametru. Klasy i nazwy definiujące style podzieliłem na 6 obszarów. Mobile, Mobile&Tablet, Tablet, Tablet&Desktop, Desktop, Wykorzystywane przez wszystkie. Dzięki takiemu rozwiązaniu nie musiałem powielać kodu. 
+Aby zrobić marginesy wszystkim sekcją nadałem ten sam margines z lewej strony i w zależności od szerokości sterowałem wielkością przy pomocy "first-child, last-child".
+Wielkość czcionki przypisałem do zmiennej i manipulowałem poprzez działania matematyczne.
+
+Wykonanie zadania pozwoliło mi nauczyć się mechanizmów sass'a, które muszę przyznać są bardzo wygodne. Starałem się wykorzystać je gdy tylko nadarzyła mi się okazja. 
+
+Największe problemy napotkałem przy tworzeniu stopki. Rozwiązłemu to zagadnienie poprzez stworzenie wrappera mającego wysokość 100vh (viewport height - wysokości dostępnego obszaru) i pozycją relative (dzięki czemu pojemniki w środku są w odniesieniu do tego wrappera). Stopce natomiast nadałem przyleganie do dolnej krawędzi pojemnika nadrzędnego na 0 i pozycję absolut, co sprawi, że stopka będzie przyległa do dołu. Na tym etapi pojawił się problem, ponieważ stopka mogła nachodzić na pojemnik znajdujący się nad nim o swoją szerokość. Rozwiązałem to przez dodatkowy padding dla pojemnika nad footer równy wielkości stopki.  Do ustalenia wielkości wykorzystałem jednostkę rem - wielkość czcionki dziedziczona z najwyższego elementu DOM.

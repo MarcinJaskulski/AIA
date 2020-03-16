@@ -1,0 +1,260 @@
+$fontSize: 16px;
+$paddingSize: 4%;
+$marginSize: $paddingSize;
+$greenColor: #8FBC8F;
+
+
+/*Mobile*/
+@media only screen and(max-width: 767px){
+	#title{
+		display: none;
+	}
+
+	.content > .section{
+		width: (100% - $marginSize*2);
+		margin-right: $marginSize;
+		margin-bottom: $marginSize;
+	}
+
+	.borderSection > .sectionBody{
+		min-height: 0px;
+	}
+}
+
+/*Tablet i Mobile*/
+@media only screen and(max-width: 1023px){
+	#menu{
+		display: none;
+		position: absolute;
+		background-color: white;
+		margin-top: -5px;
+		padding: 0px;
+	}
+
+	.dropdown{
+		display: block;
+		float: right;
+		position: relative;
+
+		&:before{
+			clear: both;
+		}
+		&:hover > #menu{ //wiekszy konkret dziedziczenia
+			display: block;
+		}
+	}
+
+	li{
+		padding: 5px;
+		list-style-type: none;
+	}
+}
+/*Tablet*/
+@media only screen and(min-width: 768px)and(max-width: 1023px){
+	
+
+	.content{
+		> .section:first-child{
+			width: (100% - $marginSize*2);
+			margin-right: $marginSize;
+			margin-bottom: $marginSize;
+		}
+		> .section{
+			width: (100% - $marginSize*3) / 2;
+			margin-bottom: $marginSize;
+		}
+	}
+
+	.borderSection{ 
+		> .sectionBody{
+			min-height: 0px;
+		}
+		> .normalizeBody{
+			min-height: 240px;
+		}
+	}
+
+}
+
+/*Tablet i Desktop*/
+@media only screen and(min-width: 768px){
+	#title{
+		margin-left: 1%;
+		padding: 0;
+		padding-top: 20px;
+		float: left;
+		font-size: $fontSize*2;
+	}
+
+}
+
+
+@media only screen and(min-width: 1024px){
+	#logoMenu{
+		display: none;
+	}
+
+	
+	#menu{
+		display: block;
+		float: left;
+		padding: 0;
+		margin: 0;
+		width: 400px;
+		list-style-type: none;
+		font-size: $fontSize*1.5;
+
+		&:before{
+			clear: both;
+		}
+	}
+
+	.dropdown{
+		display: block;
+		float: right;
+
+		&:before{
+			clear: both;
+		}
+	}
+
+	#menu > li {
+			float: left;
+			list-style-type: none;
+			width: (100%) / 5;
+
+			&:before{
+				clear: both;
+			}
+	}
+}
+//-------------------------
+
+@import 'body';
+
+#nav{
+	width: 100%;
+	display: inline-block;
+}
+
+.navPadding{
+	padding: $paddingSize;
+}
+
+#logo{
+	float: left;
+	display: block;
+}
+
+li{
+	text-align: center;
+	&:hover{
+		background-color: $greenColor;
+	}
+}
+
+#container{
+	width: 100%;
+	font-size: $fontSize;
+	padding-bottom: 6rem;
+}
+
+.content{
+	width: 100%;
+	display: inline-block;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.section{
+	width: (100% - $marginSize*4) / 3;
+	background-color: $greenColor;
+
+	float: left;
+	margin-left: $marginSize;
+	display: block;
+	margin-bottom: $marginSize;
+	&:last-child{
+		margin-right: $marginSize;
+		&:before{
+			clear: both;
+		}
+	}
+}
+
+.borderSection{
+	border: solid;
+	border-width: 2px;
+	display: inline-block;
+}
+
+.sectioTitleNav{
+	width: 100%;
+	display: inline-block;
+}
+
+.emptySpace{
+	display: block;
+	float: left;
+}
+
+@mixin sectionTitle{
+	width: 200px;
+	display: block;
+	float: right;
+	text-align: center;
+	border-bottom: solid;
+	border-left: solid;
+	border-width: 2px;
+	margin-bottom: -2px;
+	margin-left: -2px;
+	padding: 10px;
+	font-size: $fontSize*1.5;
+}
+
+.sectionTitle1{
+	//@extend sectionTitle; //gdbym chciał rozszerzyć o klasę 
+	@include sectionTitle;
+	background-color: cyan;
+}
+
+.sectionTitle2{
+	@include sectionTitle;
+	background-color: orange;
+}
+
+.sectionTitle3{
+	@include sectionTitle;
+	background-color: pink;
+}
+
+.sectionBody{
+	padding: 20px;
+	min-height: 270px;
+	text-align: justify;
+}
+
+//------------------------------
+
+#wrapper {
+	position: relative; //pozostawiamy przewidziane dla niego miejsce i staje się odnośnikiem dla np. absolute
+  	min-height: 100vh; //viewport height
+}
+
+
+footer {
+	position: absolute; //położenie wzdlędem górnego lewego rogu;
+	bottom: 0;
+	width: 100%;
+	height: 2rem; //relative to font-size of the root element; wielkość czcionki tak na prawdę diedziczona z najwyższego elementu DOM
+	padding-top: 2rem;
+	padding-bottom: 2rem;
+
+	background-color: $greenColor;
+	text-align: center;
+	font-family: Arial, Helvetica, sans-serif;
+	border-top: solid;
+}
+
+
+
+
