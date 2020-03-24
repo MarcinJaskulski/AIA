@@ -1,0 +1,26 @@
+#container{
+    margin: auto;
+    width: 60%;
+}
+
+#myTable{
+    width: 100%;
+}
+
+#myTable > thead{
+    text-align: center;
+}
+
+tr:nth-child(even)
+{
+  background-color: grey;
+  color:white;
+}
+
+thead > tr {
+    background-color: grey;
+}
+
+thead > tr > th{
+    width: 33.3%
+}
