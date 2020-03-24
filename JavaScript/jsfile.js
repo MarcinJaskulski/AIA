@@ -60,8 +60,6 @@ function editBook(nr){
     cellValue1 = cell1.innerHTML;
     cellValue2 = cell2.innerHTML;
 
-    cell1.innerHTML = 
-
     idAuthor = "author" + nr;
     idTitle = "title" + nr;
 
