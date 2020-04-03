@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <script
+      type="text/javascript"
+      src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"
+    ></script>
+    <style>
+      a {
+        margin: 10px;
+      }
+      #content {
+        border: 1px solid black;
+        padding: 20px;
+        width: 50%;
+      }
+    </style>
+
+    <script type="text/javascript">
+      $(function() {
+        $("#getGuitar").click(function() {
+          $.getJSON("guitars.json", function(data) {
+            var items = [];
+
+            for (var i = 0; i < data.Guitars.Guitar.length; i++) {
+              $.each(data.Guitars.Guitar[i], function(key, val) {
+                items.push("<li>" + key + " - " + val + "</li>");
+              });
+            }
+
+            $("<ul/>", {
+              class: "my-new-list",
+              html: items.join("")
+            }).appendTo("#content");
+          });
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <button id="getGuitar">SHOW GUITARS</button>
+    <div id="content"></div>
+  </body>
+</html>

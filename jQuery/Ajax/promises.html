@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <script
+      type="text/javascript"
+      src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"
+    ></script>
+    <style>
+      a {
+        margin: 10px;
+      }
+      #content {
+        border: 1px solid black;
+        padding: 20px;
+        width: 460px;
+      }
+    </style>
+
+    <script type="text/javascript">
+      function get(url) {
+        // Return a new promise.
+        return new Promise(function(resolve, reject) {
+          // Do the usual XHR stuff
+          var req = new XMLHttpRequest();
+          req.open("GET", url);
+
+          req.onload = function() {
+            // This is called even on 404 etc
+            // so check the status
+            if (req.status == 200) {
+              // Resolve the promise with the response text
+              resolve(req.status + " - " + req.statusText);
+            } else {
+              // Otherwise reject with the status text
+              // which will hopefully be a meaningful error
+              reject(Error(req.status + " - " + req.statusText));
+            }
+          };
+
+          // Handle network errors
+          req.onerror = function() {
+            reject(Error("Network Error"));
+          };
+
+          // Make the request
+          req.send();
+        });
+      }
+
+      $(function() {
+        $("#promiseButton").click(function() {
+
+          get($("#promiseInput").val()).then(
+            function(response) {
+              console.log("Success!", response);
+              $("#content").html(response);
+            },
+            function(error) {
+              console.error("Failed!", error);
+              $("#content").html(error);
+            }
+          );
+        });
+      });
+    </script>
+  </head>
+  <body>
+      <div style="margin-bottom: 10px;">
+        <input id="promiseInput"  style="display: inline; width: 400px;"> </input>
+        <button id="promiseButton" style="display: inline; width: 100px; padding: auto;">CLICK</button>
+      </div>
+    <div id="content"></div>
+  </body>
+</html>

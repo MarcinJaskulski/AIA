@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <!-- //zad 9 $('ol.a li:not(:has(*.b:has(a)))').addClass('asdf') -->
+  <head>
+    <meta charset="utf-8" />
+    <title>jQuery</title>
+
+    <style>
+      .asdf {
+        background: Pink;
+      }
+    </style>
+
+    <script
+      type="text/javascript"
+      src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"
+    ></script>
+
+    <script type="text/javascript">
+      $(document).ready(function() {
+        $("td").one("click", edit); // only one time event
+
+        $("button").bind("asdf", function() { // define own event
+          alert("The cake is a lie!");
+        });
+      });
+
+      function edit() {
+        var element = $(this);
+        var value = element.text(); // the text between the tag (<> text </>); </> is treadted like string
+        element.html("<input id='edit' value=" + value + "></input>"); // content can by interpreted like html
+
+        $("#edit").focus(); // focus on input
+
+       
+        $("#edit").blur(function() {  // when lost focus on this element;
+          element.html($(this).val()); // value is property in the tag
+          element.one("click", edit);
+        });
+
+
+        $('button').trigger('asdf'); // trigger a bind event
+        //$('*').unbind(); // unbind all events
+      }
+
+    </script>
+  </head>
+  <body>
+    <table>
+      <tr>
+        <td>One</td>
+      </tr>
+      <tr>
+        <td>Two</td>
+      </tr>
+      <tr>
+        <td>Three</td>
+      </tr>
+      <tr>
+        <td>...</td>
+      </tr>
+    </table>
+
+    <button>CLICK</button>
+  </body>
+</html>
