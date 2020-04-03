@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-  <!-- //zad 9 $('ol.a li:not(:has(*.b:has(a)))').addClass('asdf') -->
   <head>
     <meta charset="utf-8" />
     <title>jQuery</title>
@@ -11,10 +10,7 @@
       }
     </style>
 
-    <script
-      type="text/javascript"
-      src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"
-    ></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" ></script>
 
     <script type="text/javascript">
       $(document).ready(function() {
@@ -31,13 +27,11 @@
         element.html("<input id='edit' value=" + value + "></input>"); // content can by interpreted like html
 
         $("#edit").focus(); // focus on input
-
        
         $("#edit").blur(function() {  // when lost focus on this element;
           element.html($(this).val()); // value is property in the tag
           element.one("click", edit);
         });
-
 
         $('button').trigger('asdf'); // trigger a bind event
         //$('*').unbind(); // unbind all events
