@@ -1,0 +1,41 @@
+.Container {
+  width: 80%;
+  margin: auto;
+  margin-top: 40px;
+}
+
+.inputPng{
+  width: 20px;
+  padding: 10px;
+
+}
+
+.row{
+  border: black;
+  border: solid;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+td{
+  height: 50px;
+}
+
+.serachInput{
+  border-radius: 30px;
+  min-height: 30px;
+  width: 250px;
+}
+
+.divSearchName{
+  width: 250px;
+  margin: auto;
+  margin-top: 40px;
+}
+
+.inputAddManga{
+  border-radius: 10px;
+  width: 200px;
+}

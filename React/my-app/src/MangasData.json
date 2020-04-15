@@ -1,0 +1,8 @@
+{
+    "Mangas":
+    [
+        { "id": 0, "name": "One-Piece", "desc": "XYZ", "volumes": 36, "src": "https://sm.ign.com/t/ign_pl/blogroll/o/one-piece-/one-piece-world-seeker-review_xe7p.1280.jpg", "show": true},
+        { "id": 1, "name": "Bakuman", "desc": "YZX", "volumes": 14,  "src": "https://c.wallhere.com/photos/e2/78/Bakuman_anime_boys_Moritaka_Mashiro_Takagi_Akito_anime-112.jpg!d", "show": true},
+        { "id": 2, "name": "Attack On Titan", "desc": "ZYX", "volumes": 21, "src": "https://snk.wbijam.pl/fb/grafika/pierwsza_seria/temp.jpg", "show": true}
+    ]
+}
