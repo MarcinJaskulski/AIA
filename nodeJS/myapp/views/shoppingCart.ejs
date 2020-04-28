@@ -16,6 +16,12 @@
 
         <div class="container">
             <h1>Order</h1>
+
+            <% if (alert) { %>
+                <div class="allert">
+                    <%= alert %>
+                </div>
+            <% } %>
         
             <div style=" padding: 10px; ">
                 <a class="likeButton" style="float: left;" href="/index" >Index</a>
