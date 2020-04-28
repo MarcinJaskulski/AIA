@@ -59,6 +59,7 @@ router.get('/shoppingCart', (req, res) => {
         isNotBought = false
         whatIsNotBought = ""
         req.session.cart = whatIsNotBoughtList
+        whatIsNotBoughtList = []
     }
 
 
