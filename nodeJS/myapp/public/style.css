@@ -1,0 +1,90 @@
+html, body {
+    margin: none;
+    padding: none;
+    background-color: rgb(219, 216, 216);
+}
+
+
+.container{
+    width: 80%;
+    margin: auto;
+}
+
+.list{
+    list-style-type: none;
+}
+
+.container > h1{
+    text-align: center;
+}
+
+a{
+    text-decoration: none;
+}
+
+.likeButton {
+    display: block;
+    width: 115px;
+    height: 25px;
+    background: #4E9CAF;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    margin: 10px;
+}
+
+
+.list > li{
+    background-color: white;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.addButton{
+    display: block;
+    width: 115px;
+    height: 40px;
+    background: green;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    margin: 10px
+}
+
+.addButton:hover{
+    cursor: pointer;
+}
+
+
+.removeButton{
+    display: block;
+    width: 115px;
+    height: 40px;
+    background: rgb(228, 61, 61);
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    margin: 10px
+}
+
+.removeButton:hover{
+    cursor: pointer;
+}
+
+.allert{
+    display: block;
+    background: red;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    margin: 10px
+}
