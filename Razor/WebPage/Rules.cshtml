@@ -1,0 +1,44 @@
+﻿@{
+    Layout = null;
+
+    List<string> rules = new List<string>();
+    if(Session["rules"] != null)
+    {
+        rules = (List<string>)Session["rules"];
+    }
+
+    if (Request["rule"] != null && !Request["rule"].IsEmpty() && IsPost)
+    {
+        string rule = Request["rule"].ToString();
+        rules.Add(rule);
+        Session["rules"] = rules;
+
+        Response.Redirect("Rules.cshtml");
+    }
+
+}
+
+    <!DOCTYPE html>
+
+    <html>
+    <head>
+        <meta name="viewport" content="width=device-width" />
+        <title></title>
+    </head>
+    <body>
+        <div>
+            <form method="post">
+                <input name="rule" />
+                <button>Add</button>
+            </form>
+            <ol>
+                @{
+                    foreach (var rule in rules)
+                    {
+                        <li> @rule</li>
+                    }
+                }
+            </ol>
+        </div>
+    </body>
+</html>
